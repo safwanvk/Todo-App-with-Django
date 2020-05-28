@@ -1,10 +1,14 @@
 from django.shortcuts import render
 
 # Create your views here.
-def home(request):
+from account.forms import TodoForm
 
-    return render(request, 'home.html')
+
+def home(request):
+    form = TodoForm()
+
+    return render(request, 'home.html', {'form': form})
+
 
 def update(request):
-
-     return render(request, 'update.html')
+    return render(request, 'update.html')

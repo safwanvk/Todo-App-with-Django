@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
+{% load crispy_forms_filters %}
+
 {% block title %}
 Home
 {% endblock %}
+
 {% block content%}
-<body>
 <section id="todo">
     <div class="container">
         <div class="row">
@@ -12,8 +14,7 @@ Home
             </div>
             <div class="col-md-12">
                 <form method="POST">
-                    <label for="title">Title*</label>
-                    <input type="text" name="title" id="title" class="form-control mb-2"/>
+                    {{ form|crispy }}
                     <input type="submit" class="btn btn-dark btn-block" value="Submit"/>
                 </form>
             </div>
