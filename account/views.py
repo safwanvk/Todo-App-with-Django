@@ -28,3 +28,10 @@ def update(request, todo_id):
             return redirect('home')
 
     return render(request, 'update.html', {'form': form, 'todo': todo})
+
+def delete(request, todo_id):
+    if request.method == 'POST':
+        Todo.objects.get(id=todo_id).delete()
+        return redirect('home')
+
+
