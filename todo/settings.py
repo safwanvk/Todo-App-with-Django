@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qhwn#nunsg#hj=v=+q(yi9ksbx_ah^4pimn*g@g3^&i9)*kx9y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://zabtodo.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
